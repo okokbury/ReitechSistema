@@ -4,7 +4,7 @@
 
 @section('content')
 
-<h1>Ordens de Serviço</h1>
+<h1>Estoque</h1>
 
 
 @endsection

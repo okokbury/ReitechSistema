@@ -1,0 +1,70 @@
+* {
+    font-family:'Jost'
+}
+
+.corpo {
+    background-color: rgb(89, 158, 223);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+
+.botao-login {
+    background-color: rgb(73, 73, 248);
+    color: white;
+    padding: 9px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.botao-login:hover {
+    background-color:rgba(73, 73, 248, 0.2);
+    border-color: #eee;
+    color: f8f8f8;
+}
+
+.botao-registro {
+    background-color: rgb(73, 73, 248);
+    color: white;
+    padding: 7px 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.botao-registro:hover {
+    background-color:rgba(73, 73, 248, 0.2);
+    border-color: #eee;
+    color: f8f8f8;
+}
+
+.logo {
+    max-width: 80vh; 
+    height: auto;    
+    margin-bottom: -10px
+}
+
+.container-homepage{
+    background-color: white;
+    border-radius: 45px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 25vh;
+    width: 90vh;
+}
+
+.container-botoes{
+    display: flex;
+    flex-direction: row; 
+    gap: 10px;           
+    justify-content: center; 
+    align-items: center; 
+    width: 100%;         
+}
