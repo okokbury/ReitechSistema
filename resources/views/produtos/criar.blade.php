@@ -10,8 +10,12 @@
 <div class="container-homepage">
     <div id="event-create-container">
         <h1>Cadastrar Produto Novo</h1>
-        <form action="/produtos" method="POST">
+        <form action="/produtos" method="POST" enctype="multipart/form-data">
         @csrf
+        <div class="form-group">
+            <label for="image">Imagem do Produto:</label>
+            <input type="file" class="form-control-file" id="image" name="image" placeholder="Nome do Produto">
+        </div>
         <div class="form-group">
             <label for="titulo">Nome do Produto:</label>
             <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome do Produto" required>

@@ -39,15 +39,31 @@ class ProductController extends Controller
         // Verifica se o campo preco contém vírgula ponto e outros pra nao dar pau no banco de dados :)
         $preco = preg_replace('/[^\d]/', '', $request->preco);
         $product->preco = intval($preco);
+        $product->preco = $product->preco * 100;
 
         $product->fornecedor = $request->fornecedor;
         $product->lote = $request->lote;
         $product->categoria = $request->categoria;
         $product->descricao = $request->descricao;
 
+        // upload de imagem pro banco
+        if($request->hasFile('image') && $request->file('image')){
+
+            $requestImage = $request->image;
+
+            $extension = $requestImage->extension();
+
+            $imageName = md5($requestImage->getClientOriginal() . strtotime("agora")) . "." . $extension;
+
+            $requestImage->move(public_path('img/products'), $imageName);
+
+            $product->image = $imageName;
+
+        }
+
         $product->save();
 
-        return redirect('/produtos');
+        return redirect('/produtos')->with('msg', 'Produto criado com sucesso!');
 
     }
 

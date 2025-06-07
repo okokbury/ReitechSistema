@@ -102,8 +102,37 @@ nav li:first-child{
 
 .sanduixi a:hover {
     background: #f0f0f0;
-    display: flex;
 }
+
+
+.sanduixi .dropdown {
+    position: relative;
+}
+
+.sanduixi .dropdown-menu {
+    border-radius: 0 !important;
+    border: none !important;
+    top: -3px !important;
+    background-color: rgb(216, 216, 216);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu .dropdown-item {
+    padding: 0.5rem 1rem !important;
+    line-height: 1.5 !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    padding: 0.5rem 1rem !important;
+    line-height: 1.5 !important;
+    box-sizing: border-box !important;
+}
+
+ul.sanduixi .dropdown-toggle::after {
+    margin-left: 120px !important;
+    font-size: 1.5em !important;    
+    vertical-align: middle;
+}
+
 
 .botao-padrao {
     background-color: rgb(73, 73, 248);

@@ -31,7 +31,7 @@
                     <li onclick=desamostre()><a href='#'><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
                     <li><a href="/usuarios">Login</a></li>
                     <li class="dropdown">
-                        <a class="dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Produto</a>
+                        <a class="dropdown-toggle" href="#" data-bs-toggle="dropdown" >Produto</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="/produtos">Estoque</a></li>
                             <li><a class="dropdown-item" href="/produtos/criar">Criar Produto</a></li>
@@ -45,8 +45,17 @@
         </header>
 
         
+        <main>
+            <div class="container-fluid">
+                <div class="row">
+                @if(session('msg'))
+                    <p class="msg">{{ session('msg') }}</p>
+                @endif
+                </div>
+            </div>
+            @yield('content')
+        </main>
 
-        @yield('content')
         <script>
             function amostradinho(){
                 const sanduixi = document.querySelector('.sanduixi')
