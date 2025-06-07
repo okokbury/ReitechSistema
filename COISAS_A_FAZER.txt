@@ -1,0 +1,13 @@
+criar login e cadastro
+criar requisição de ordem de serviço
+criar painel de ordem de serviço
+criar listagem de estoque
+adicionar possibilidade de remoção em todas criações produto, categoria, ordem de serviço
+colocar verificacao se ja existe no banco de dados as duas criações produto/categoria
+colocar uma div no fundo de todas as paginas
+
+arrumar menu sanduiche e colocar categorias como subproduto do menu produto
+arrumar menu sanduiche e colocar cadastrar produto como subproduto do menu produto
+arrumar menu sanduiche e colocar estoque como subproduto do menu produto
+arrumar head categorias
+arrumar foto painel superior esquerdo

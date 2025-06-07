@@ -25,7 +25,7 @@
     </div>
         <div class="form-group">
             <label for="titulo">Preço:</label>
-            <div class="input-group mb-3"> <span class="input-group-text" id="basic-addon1">R$</span>
+            <div class="z-n1 input-group mb-3"> <span class="input-group-text" id="basic-addon1">R$</span>
             <input type="number" class="form-control" id="preco" name="preco" placeholder="3.99" required min="0" step=".01" aria-label="Preço" aria-describedby="basic-addon1">
         </div>
     </div>

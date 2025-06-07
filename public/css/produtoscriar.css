@@ -6,3 +6,7 @@ textarea {
 
   width: 100%;
 }
+
+.titulo {
+  z-index: -1;
+}

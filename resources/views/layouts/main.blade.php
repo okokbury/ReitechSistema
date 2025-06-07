@@ -30,7 +30,14 @@
                 <ul class="sanduixi">
                     <li onclick=desamostre()><a href='#'><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
                     <li><a href="/usuarios">Login</a></li>
-                    <li><a href="/produtos">Produto</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Produto</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/produtos">Estoque</a></li>
+                            <li><a class="dropdown-item" href="/produtos/criar">Criar Produto</a></li>
+                            <li><a class="dropdown-item" href="/categorias">Categorias de Produto</a></li>
+                        </ul>
+                    </li>
                     <li><a href="/ordemservico">Ordem de Serviço</a></li>
                 </ul>
                 
@@ -49,6 +56,9 @@
                 const sanduixi = document.querySelector('.sanduixi')
                 sanduixi.style.display = 'none'
             }
+        
         </script>
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+
     </body>
 </html>
