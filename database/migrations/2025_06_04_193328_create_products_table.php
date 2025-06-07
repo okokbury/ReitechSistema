@@ -14,8 +14,12 @@ return new class extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->string('nome', 100);
+            $table->string('codigo_peca', 30);
             $table->integer('quantidade');
             $table->decimal('preco', 8, 2);
+            $table->string('fornecedor', 100);
+            $table->string('lote', 20);
+            $table->string('categoria', 100)->nullable();
             $table->text('descricao')->nullable();
             $table->timestamps();
         });

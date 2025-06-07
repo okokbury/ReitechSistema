@@ -13,6 +13,7 @@ Route::get('/ordemservico', [OrdemServicoController::class, 'index']);
 
 Route::get('/produtos', [ProductController::class, 'index']);
 Route::get('/produtos/criar', [ProductController::class, 'create']);
+Route::post('/produtos', [ProductController::class, 'store']);
 
 Route::get('/', function () {
     return view('homepage');
