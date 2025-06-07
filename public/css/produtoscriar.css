@@ -7,6 +7,30 @@ textarea {
   width: 100%;
 }
 
+.container-homepage{
+    width: 90%;
+    max-width: 90vh;
+    height: auto;
+    min-height: 25vh;
+    background-color: white;
+    border-radius: 45px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    position: relative;
+    filter: opacity(0.7);
+    
+}
+
+.form-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 .titulo {
   z-index: -1;
 }

@@ -1,3 +1,4 @@
+! PREVINIR DUPLICATAS DE PRODUTOS E CATEGORIAS
 criar login e cadastro
 criar requisição de ordem de serviço
 criar painel de ordem de serviço

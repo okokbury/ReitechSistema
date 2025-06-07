@@ -36,13 +36,9 @@ class ProductController extends Controller
         $product->codigo_peca = $request->codigo_peca;
         $product->quantidade = $request->quantidade;
 
-        // Verifica se o campo preco contém vírgula e substitui por ponto pra nao dar pau no banco de dados :)
-        if(str_contains($request->preco, ',')) {
-            $request->preco = str_replace(',', '.', $request->preco);
-        } 
-        else {
-        $product->preco = $request->preco;
-        }
+        // Verifica se o campo preco contém vírgula ponto e outros pra nao dar pau no banco de dados :)
+        $preco = preg_replace('/[^\d]/', '', $request->preco);
+        $product->preco = intval($preco);
 
         $product->fornecedor = $request->fornecedor;
         $product->lote = $request->lote;
