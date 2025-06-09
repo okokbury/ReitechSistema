@@ -24,12 +24,34 @@
         <header>
             <nav>
                 <ul>
+                    @auth
                     <li onclick=amostradinho()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#000000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
-                    <li class="foto-user"><a href="/">Foto user</a></li>
+                    @endauth
+                    @guest
+                    <li><a href="/login">Login</a></li>
+                    @endguest
+                    @auth
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" href="#" data-bs-toggle="dropdown" >Foto user</a>
+                        <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="/dashboard">Meus Dados</a></li>
+                            <li><form class="dropdown-item" action="/logout" method="POST">@csrf 
+                                <a href="/logout" 
+                                class="nav-link" 
+                                onclick="event.preventDefault();
+                                this.closest('form').submit();">
+                                Sair</a>
+                            </form>
+                            </li>
+                        </ul>
+                    </li>
+                    @endauth
                 </ul>
+                @auth
                 <ul class="sanduixi">
                     <li onclick=desamostre()><a href='#'><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
-                    <li><a href="/usuarios">Login</a></li>
+                    <li><a href="/">Inicio</a></li>
+                    
                     <li class="dropdown">
                         <a class="dropdown-toggle" href="#" data-bs-toggle="dropdown" >Produto</a>
                         <ul class="dropdown-menu">
@@ -39,8 +61,9 @@
                         </ul>
                     </li>
                     <li><a href="/ordemservico">Ordem de Serviço</a></li>
+                    
                 </ul>
-                
+                @endauth
             </nav>
         </header>
 

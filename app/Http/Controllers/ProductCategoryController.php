@@ -13,7 +13,7 @@ class ProductCategoryController extends Controller
         $categorias = ProductCategory::all();
 
         return view('produtos.categorias', [
-            'productcategories' => $categorias,
+        'categorias' => $categorias,
         ]);
     }
 
@@ -30,4 +30,12 @@ class ProductCategoryController extends Controller
         return redirect('/categorias');
 
     }
+
+    public function destroy($id){
+        $categoria = ProductCategory::findOrFail($id);
+        
+        $categoria->delete();
+        return redirect('/categorias')->with('msg', 'Categoria excluída com sucesso!');
+    }
+
 }

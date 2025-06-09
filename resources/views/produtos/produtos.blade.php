@@ -1,20 +1,20 @@
 @extends('layouts.main')
 
-@section('title', 'Criar Produto')
+@section('title', 'Estoque')
 
 @section('content')
 
-<div class="container mt-4"> 
+<div class="container mt-4">
     <h1>Estoque de Produtos</h1>
 
     @php
         $products = $products ?? collect();
     @endphp
 
-    @if(count($products) > 0) 
-        <div class="table-responsive"> 
-            <table class="table table-hover table-striped align-middle"> 
-                <thead class="table-dark"> 
+    @if(count($products) > 0)
+        <div class="table-responsive">
+            <table class="table table-hover table-striped align-middle">
+                <thead class="table-dark">
                     <tr>
                         <th scope="col">Imagem</th>
                         <th scope="col">Nome</th>
@@ -25,7 +25,7 @@
                         <th scope="col">Lote</th>
                         <th scope="col">Categoria</th>
                         <th scope="col">Descrição</th>
-                        <th scope="col">Ações</th>
+                        <th scope="col">Ações</th> 
                     </tr>
                 </thead>
                 <tbody>
@@ -35,16 +35,16 @@
                                 @if($product->image)
                                     <img src="/img/products/{{ $product->image }}" alt="{{ $product->nome }}" class="img-thumbnail" style="width: 50px; height: 50px; object-fit: cover;">
                                 @else
-                                    <img src="/img/products/no_image.png" alt="Sem Imagem" class="img-thumbnail" style="width: 50px; height: 50px; object-fit: cover;"> {{-- Imagem placeholder --}}
+                                    <img src="/img/products/no_image.png" alt="Sem Imagem" class="img-thumbnail" style="width: 50px; height: 50px; object-fit: cover;"> 
                                 @endif
                             </td>
                             <td>{{ $product->nome }}</td>
                             <td>{{ $product->codigo_peca }}</td>
                             <td>{{ $product->quantidade }}</td>
-                            <td>R$ {{ number_format($product->preco / 100, 2, ',', '.') }}</td> 
+                            <td>R$ {{ number_format($product->preco/100, 2, ',', '.') }}</td>
                             <td>{{ $product->fornecedor }}</td>
                             <td>{{ $product->lote }}</td>
-                            <td>{{ $product->categoria }}</td>
+                            <td>{{ $product->productCategory->nome ?? 'Categoria não encontrada' }}</td>
                             <td>{{ Str::limit($product->descricao, 50) }}</td>
                             <td>
                                 <a href="/produtos/edit/{{ $product->id }}" class="btn btn-info btn-sm me-2"><ion-icon name="create-outline"></ion-icon> Editar</a>
@@ -67,9 +67,8 @@
     @endif
 
     <div class="mt-4">
-        
         @if(method_exists($products, 'links'))
-            {{ $products->links('pagination::bootstrap-5') }}
+            {{ $products->links('pagination::bootstrap-5') }} 
         @endif
     </div>
 </div>

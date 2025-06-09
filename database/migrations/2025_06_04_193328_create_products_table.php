@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('fornecedor', 20);
             $table->string('categoria', 100)->nullable();
             $table->text('descricao')->nullable();
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }
