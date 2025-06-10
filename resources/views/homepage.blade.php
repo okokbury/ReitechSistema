@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', 'Dashboard')
+@section('title', 'Inicio')
 
     {{-- Scripts --}}
     <link rel="stylesheet" href="{{ asset('css/homepage.css') }}">

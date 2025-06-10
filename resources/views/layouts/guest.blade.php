@@ -16,6 +16,7 @@
 
         <!-- Styles -->
         @livewireStyles
+        <link rel="stylesheet" href="{{ asset('css/custom-auth.css') }}">
     </head>
     <body>
         <div class="font-sans text-gray-900 antialiased">

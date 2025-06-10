@@ -1,0 +1,21 @@
+
+body {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.min-h-screen.bg-gray-100 {
+    background-color: transparent !important;
+}
+
+div.sm\:rounded-lg.bg-white {
+    position: relative; /* Important para posicionar o ::before */
+    background-color: rgba(255, 255, 255, 0.445) !important;
+    border-radius: 30px !important;
+    box-shadow: none !important;
+    overflow: hidden; /* Importante para o border-radius do ::before */
+}
+

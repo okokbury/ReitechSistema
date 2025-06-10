@@ -34,7 +34,6 @@
                     <li class="dropdown">
                         <a class="dropdown-toggle" href="#" data-bs-toggle="dropdown" >Foto user</a>
                         <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="/dashboard">Meus Dados</a></li>
                             <li><form class="dropdown-item" action="/logout" method="POST">@csrf 
                                 <a href="/logout" 
                                 class="nav-link" 
@@ -66,7 +65,7 @@
                 @endauth
             </nav>
         </header>
-
+        @auth
         
         <main>
             <div class="container-fluid">
@@ -91,6 +90,6 @@
         
         </script>
          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
-
+    @endauth
     </body>
 </html>
