@@ -21,7 +21,8 @@ class ProductController extends Controller
             
         $query->where(function($q) use ($search) {
             $q->where('nome', 'like', "%{$search}%")
-              ->orWhere('codigo_peca', 'like', "%{$search}%");
+              ->orWhere('codigo_peca', 'like', "%{$search}%")
+              ->orWhere('categoria', 'like', "%{$search}%");
             });
         }   
 
