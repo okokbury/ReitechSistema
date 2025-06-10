@@ -5,8 +5,21 @@
 @section('content')
 
 <div class="container mt-4">
-    <h1>Estoque de Produtos</h1>
+    
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h1 class="mb-0">Estoque de Produtos</h1>
+        <a href="/produtos/criar" class="btn btn-primary">
+            <ion-icon name="add-outline" class="align-middle"></ion-icon>
+            Cadastrar Novo Produto
+        </a>
+    </div>
 
+    <div class="card card-body mb-4">
+        <form action="{{ route('products.index') }}" method="GET" class="d-flex">
+            <input type="text" name="search" class="form-control me-2" placeholder="Buscar por nome ou código da peça..." value="{{ request('search') }}">
+            <button type="submit" class="btn btn-outline-primary">Buscar</button>
+        </form>
+    </div>
     @php
         $products = $products ?? collect();
     @endphp

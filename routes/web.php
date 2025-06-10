@@ -15,7 +15,7 @@ Route::get('/ordemservico/edit/{id}', [OrdemServicoController::class, 'edit'])->
 Route::put('/ordemservico/{id}', [OrdemServicoController::class, 'update'])->name('ordem.update');
 Route::delete('/ordemservico/{id}', [OrdemServicoController::class, 'destroy'])->name('ordem.destroy');
 
-Route::get('/produtos', [ProductController::class, 'index']);
+Route::get('/produtos', [ProductController::class, 'index'])->name('products.index');
 Route::get('/produtos/criar', [ProductController::class, 'create']);
 Route::post('/produtos', [ProductController::class, 'store']);
 Route::get('/produtos/edit/{id}', [ProductController::class, 'edit'])->name('products.edit');

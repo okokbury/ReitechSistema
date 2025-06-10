@@ -74,7 +74,6 @@
         <div class="alert alert-warning" role="alert">
             Nenhuma Ordem de Serviço cadastrada ainda.
         </div>
-        <p><a href="/ordemservico/criar" class="btn btn-primary">Criar Nova Ordem de Serviço</a></p>
     @endif
 
     <div class="mt-4">

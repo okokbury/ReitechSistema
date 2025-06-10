@@ -166,6 +166,41 @@ ul.sanduixi .dropdown-toggle::after {
     transition: background-color 0.15s ease-in-out;
 }
 
+.flash-message {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1050;
+    width: auto;
+    color: #0f5132;
+    background-color: #d1e7dd;
+    border: 1px solid #badbcc;
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    gap: 20px;
+}
+
+.flash-close-btn {
+    background: none;
+    border: none;
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #0f5132;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+    opacity: 0.6;
+    transition: opacity 0.15s ease-in-out;
+}
+
+.flash-close-btn:hover {
+    opacity: 1;
+}
 
 
 .dropdown-toggle::after {

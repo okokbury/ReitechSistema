@@ -71,7 +71,10 @@
             <div class="container-fluid">
                 <div class="row">
                 @if(session('msg'))
-                    <p class="msg">{{ session('msg') }}</p>
+                    <div class="flash-message" id="flash-message">
+                        <span>{{ session('msg') }}</span>
+                        <button type="button" class="flash-close-btn" onclick="this.parentElement.style.display='none';">&times;</button>
+                    </div>
                 @endif
                 </div>
             </div>

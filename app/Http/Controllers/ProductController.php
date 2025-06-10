@@ -11,9 +11,21 @@ use Illuminate\Support\Facades\File;
 class ProductController extends Controller
 {
     
-    public function index(){
+    public function index(Request $request){
 
+        $search = $request->input('search');
+        $query = Product::with('productCategory');
         $products = Product::with('productCategory')->latest()->paginate(15);
+
+        if ($search) {
+            
+        $query->where(function($q) use ($search) {
+            $q->where('nome', 'like', "%{$search}%")
+              ->orWhere('codigo_peca', 'like', "%{$search}%");
+            });
+        }   
+
+        $products = $query->latest()->paginate(15);
 
         return view('produtos.produtos', [
             'products' => $products,
