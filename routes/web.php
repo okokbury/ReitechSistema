@@ -27,10 +27,6 @@ Route::get('/categorias/criar', [ProductCategoryController::class, 'create']);
 Route::post('/categorias', [ProductCategoryController::class, 'store']);
 Route::delete('/categorias/{id}', [ProductCategoryController::class, 'destroy'])->name('categories.destroy');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
-
 Route::get('/', function () {
     return view('homepage');
 });
