@@ -46,9 +46,9 @@
                         <tr>
                             <td>
                                 @if($product->image)
-                                    <img src="/img/products/{{ $product->image }}" alt="{{ $product->nome }}" class="img-thumbnail" style="width: 50px; height: 50px; object-fit: cover;">
+                                    <img src="/img/products/{{ $product->image }}" alt="{{ $product->nome }}" class="img-thumbnail" style="width: 100px; height: 100px; object-fit: cover;">
                                 @else
-                                    <img src="/img/products/no_image.png" alt="Sem Imagem" class="img-thumbnail" style="width: 50px; height: 50px; object-fit: cover;"> 
+                                    <img src="/img/products/no_image.jpg" alt="Sem Imagem" class="img-thumbnail" style="width: 100px; height: 100px; object-fit: cover;"> 
                                 @endif
                             </td>
                             <td>{{ $product->nome }}</td>
