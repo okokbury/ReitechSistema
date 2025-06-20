@@ -8,10 +8,6 @@
     
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h1 class="mb-0">Estoque de Produtos</h1>
-        <a href="/produtos/criar" class="btn btn-primary">
-            <ion-icon name="add-outline" class="align-middle"></ion-icon>
-            Cadastrar Novo Produto
-        </a>
     </div>
 
     <div class="card card-body mb-4">

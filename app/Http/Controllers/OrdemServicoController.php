@@ -48,7 +48,7 @@ class OrdemServicoController extends Controller
 
         $ordemservico->save();
 
-        return redirect('/ordemservico')->with('msg', 'Produto criado com sucesso!');
+        return redirect('/ordemservico')->with('msg', 'Ordem criada com sucesso!');
 
     }
 

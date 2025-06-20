@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', 'Criar Produto')
+@section('title', 'Criar Ordem de Serviço')
 
     {{-- Scripts --}}
     <link rel="stylesheet" href="{{ asset('css/produtoscriar.css') }}">
@@ -54,11 +54,11 @@
         </div>
         <div class="form-group span9">
             <label for="titulo">Descrição:</label>
-            <textarea name="descricao" id="descricao" class="form-control" placeholder="Digite a descrição do serviço." maxlength="1000"></textarea>
+            <textarea name="descricao" id="descricao" class="form-control" placeholder="Digite a descrição do serviço." maxlength="1000" required></textarea>
         </div>
         <div class="form-group span9">
             <br>
-            <input type="submit" class="btn btn-primary" value="Cadastrar Produto">
+            <input type="submit" class="btn btn-primary" value="Cadastrar Ordem de Serviço">
         </div>
         </form>
     </div>
