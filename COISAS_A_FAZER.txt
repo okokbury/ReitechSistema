@@ -1,18 +1,21 @@
-! colocar uma div no fundo de todas as paginas (FEITO)
-! criar listagem de estoque (FEITO)
-! criar excluir e editar categoria e produto (FEITO)
-! mensagem de criado com sucesso (FEITO)
-! PREVINIR DUPLICATAS DE PRODUTOS E CATEGORIAS
-! criar login e cadastro (FEITO **PRECISA SO EDITAR O JEITO Q FUNCIONA**)
-! criar requisição de ordem de serviço (FEITO)
-! criar painel de ordem de serviço, editar ordem de serviço (FEITO)
-
+arrumar foto painel superior esquerdo
+! ARRUMAR LOGIN E REDIRECT (feito)
+! ARRUMAR MENSAGEM (feito)
+! filtragem no estoque (feito)
 
 
 arrumar menu sanduiche e colocar categorias como subproduto do menu produto (FEITO)
 arrumar menu sanduiche e colocar cadastrar produto como subproduto do menu produto (FEITO)
 arrumar menu sanduiche e colocar estoque como subproduto do menu produto (FEITO)
-arrumar foto painel superior esquerdo
+! colocar uma div no fundo de todas as paginas (FEITO)
+! criar listagem de estoque (FEITO)
+! criar excluir e editar categoria e produto (FEITO)
+! mensagem de criado com sucesso (FEITO)
+! PREVINIR DUPLICATAS DE PRODUTOS E CATEGORIAS
+
+! criar requisição de ordem de serviço (FEITO)
+! criar painel de ordem de serviço, editar ordem de serviço (FEITO)
+
 
 
 Utilizado no projeto
